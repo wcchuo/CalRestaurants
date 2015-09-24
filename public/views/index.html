@@ -1,0 +1,267 @@
+<div data-ng-if="!authentication.user" class="text-center">
+	<div class="row">
+	    <div class="large-3 columns">&nbsp;</div>
+	    <div class="large-6 columns">
+	    	<div class="index-block">
+				<h4>Welcome to</h4>
+				<img src="../images/logo-cal-grey-250px.png" width="170"></br></br></br>
+				Ready to order? Please sign in.<br>
+				<a href="/#!/signup" class="button success">Sign up</a> or
+				<a href="/#!/signin" class="button">Sign in</a>
+			</div>
+		</div>
+	    <div class="large-3 columns"></div>
+	</div>
+</div>
+
+<div data-ng-if="authentication.user" class="text-center">
+	<div class="row">
+	    <div class="large-12 columns">
+			<div class="index-block">				    
+				<h3>Welcome, {{authentication.user.name}}!</h3>
+				
+				<div class="right">
+					<a href="/#!/myorder">My Order</a>&nbsp;&nbsp;&nbsp;
+					<a href="/auth/signout">Sign out</a>
+				</div><br>
+
+				<div ng-controller="OrderFormController">
+					<div ng-repeat="menu in menus">
+						<div class="block">
+							<div class="block-header pizza">
+								<b>{{menu.restaurant_name}}</b></br>
+								<b>{{menu}}</b><br>
+							</div>
+							<div class="block-image">
+								<img src="../images/menu/{{image}}" width="180" height="180"></br>
+							</div>
+							<div class="block-footer">
+								${{price}}<br>
+								<button class="button tiny radius">Order</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- PIZZARIA MENU -->
+				<div class="block">
+					<div class="block-header pizza">
+						<b>Pizzaria</b></br>
+						<b>Pepperoni Pizza</b><br>
+					</div>
+					<div class="block-image">
+						<img src="../images/menu/pepperoni-pizza.png" width="180" height="180"></br>
+					</div>
+					<div class="block-footer">
+						$9.95<br>
+						<button class="button tiny radius">Order</button>
+					</div>
+				</div>
+				<div class="block">
+					<div class="block-header pizza">
+						<b>Pizzaria</b></br>
+						<b>Vegetable Pizza</b><br>
+					</div>
+					<div class="block-image">
+						<img src="../images/menu/vegetable-pizza.png" width="180" height="180"></br>
+					</div>
+					<div class="block-footer">
+						$9.95<br>
+						<button class="button tiny radius">Order</button>
+					</div>
+				</div>
+				<div class="block">
+					<div class="block-header pizza">
+						<b>Pizzaria</b></br>
+						<b>Hawaiian Pizza</b><br>
+					</div>
+					<div class="block-image">
+						<img src="../images/menu/hawaiian-pizza.png" width="180" height="180"></br>
+					</div>
+					<div class="block-footer">
+						$9.95<br>
+						<button class="button tiny radius">Order</button>
+					</div>
+				</div>
+				<div class="block">
+					<div class="block-header pizza">
+						<b>Pizzaria</b></br>
+						<b>Chicken Pizza</b><br>
+					</div>
+					<div class="block-image">
+						<img src="../images/menu/chicken-pizza.png" width="180" height="180"></br>
+					</div>
+					<div class="block-footer">
+						$9.95<br>
+						<button class="button tiny radius">Order</button>
+					</div>
+				</div>
+
+				<!-- SANDWICH MENU -->
+				<div class="block">
+					<div class="block-header sandwich">
+						<b>Sandwich Stop</b></br>
+						<b>Carbonara Sandwich</b><br>
+					</div>
+					<div class="block-image">
+						<img src="../images/menu/carbonara-sandwich.png" width="180" height="180"></br>
+					</div>
+					<div class="block-footer">
+						$9.95<br>
+						<button class="button tiny radius">Order</button>
+					</div>
+				</div>
+				<div class="block">
+					<div class="block-header sandwich">
+						<b>Sandwich Stop</b></br>
+						<b>Mesquite Sandwich</b><br>
+					</div>
+					<div class="block-image">
+						<img src="../images/menu/mesquite-sandwich.png" width="180" height="180"></br>
+					</div>
+					<div class="block-footer">
+						$9.95<br>
+						<button class="button tiny radius">Order</button>
+					</div>
+				</div>
+				<div class="block">
+					<div class="block-header sandwich">
+						<b>Sandwich Stop</b></br>
+						<b>Caesar Sandwich</b><br>
+					</div>
+					<div class="block-image">
+						<img src="../images/menu/caesar-sandwich.png" width="180" height="180"></br>
+					</div>
+					<div class="block-footer">
+						$9.95<br>
+						<button class="button tiny radius">Order</button>
+					</div>
+				</div>
+				<div class="block">
+					<div class="block-header sandwich">
+						<b>Sandwich Stop</b></br>
+						<b>Reuben Sandwich</b><br>
+					</div>
+					<div class="block-image">
+						<img src="../images/menu/reuben-sandwich.png" width="180" height="180"></br>
+					</div>
+					<div class="block-footer">
+						$9.95<br>
+						<button class="button tiny radius">Order</button>
+					</div>
+				</div>
+
+				<!-- TAQUERIA MENU -->
+				<div class="block">
+					<div class="block-header taqueria">
+						<b>Taqueria</b></br>
+						<b>Beef Taco</b><br>
+					</div>
+					<div class="block-image">
+						<img src="../images/menu/beef-taco.png" width="180" height="180"></br>
+					</div>
+					<div class="block-footer">
+						$9.95<br>
+						<button class="button tiny radius">Order</button>
+					</div>
+				</div>
+				<div class="block">
+					<div class="block-header taqueria">
+						<b>Taqueria</b></br>
+						<b>Fish Baja Taco</b><br>
+					</div>
+					<div class="block-image">
+						<img src="../images/menu/fish-baja-taco.png" width="180" height="180"></br>
+					</div>
+					<div class="block-footer">
+						$9.95<br>
+						<button class="button tiny radius">Order</button>
+					</div>
+				</div>
+				<div class="block">
+					<div class="block-header taqueria">
+						<b>Taqueria</b></br>
+						<b>Asada Taco</b><br>
+					</div>
+					<div class="block-image">
+						<img src="../images/menu/asada-taco.png" width="180" height="180"></br>
+					</div>
+					<div class="block-footer">
+						$9.95<br>
+						<button class="button tiny radius">Order</button>
+					</div>
+				</div>
+				<div class="block">
+					<div class="block-header taqueria">
+						<b>Taqueria</b></br>
+						<b>Ahi Fish Taco</b><br>
+					</div>
+					<div class="block-image">
+						<img src="../images/menu/ahi-fish-taco.png" width="180" height="180"></br>
+					</div>
+					<div class="block-footer">
+						$9.95<br>
+						<button class="button tiny radius">Order</button>
+					</div>
+				</div>
+
+				<!-- BURGER JOINT MENU -->
+				<div class="block">
+					<div class="block-header burger-joint">
+						<b>Burger Joint</b></br>
+						<b>Burger</b><br>
+					</div>
+					<div class="block-image">
+						<img src="../images/menu/burger.png" width="180" height="180"></br>
+					</div>
+					<div class="block-footer">
+						$9.95<br>
+						<button class="button tiny radius">Order</button>
+					</div>
+				</div>
+				<div class="block">
+					<div class="block-header burger-joint">
+						<b>Burger Joint</b></br>
+						<b>Chicken Burger</b><br>
+					</div>
+					<div class="block-image">
+						<img src="../images/menu/chicken-burger.png" width="180" height="180"></br>
+					</div>
+					<div class="block-footer">
+						$9.95<br>
+						<button class="button tiny radius">Order</button>
+					</div>
+				</div>
+				<div class="block">
+					<div class="block-header burger-joint">
+						<b>Burger Joint</b></br>
+						<b>All American Burger</b><br>
+					</div>
+					<div class="block-image">
+						<img src="../images/menu/all-american-burger.png" width="180" height="180"></br>
+					</div>
+					<div class="block-footer">
+						$9.95<br>
+						<button class="button tiny radius">Order</button>
+					</div>
+				</div>
+				<div class="block">
+					<div class="block-header burger-joint">
+						<b>Burger Joint</b></br>
+						<b>Double Burger</b><br>
+					</div>
+					<div class="block-image">
+						<img src="../images/menu/double-burger.png" width="180" height="180"></br>
+					</div>
+					<div class="block-footer">
+						$9.95<br>
+						<button class="button tiny radius">Order</button>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+</div>

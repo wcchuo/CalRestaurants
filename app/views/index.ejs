@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="mean">
+	<head>
+		<title>University of California, Berkeley Restaurants</title>
+		<link rel="stylesheet" href="http://foundation.zurb.com/assets/css/templates/foundation.css">
+		<link rel="stylesheet" href="../css/style.css">
+		<script type="text/javascript" src="http://foundation.zurb.com/assets/js/modernizr.js"></script>
+		<!-- <script type="text/javascript" src="../js/foundation.js"></script>-->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.offcanvas.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  	</head>
+  	<body>
+		<!--Navigation Begin-->
+			<div class="off-canvas-wrap" data-offcanvas>
+		  		<div class="inner-wrap">
+		  			<nav class="tab-bar show-for-small">
+				        <section class="left-small">
+				            <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+				        </section>
+				    </nav>
+
+				<!-- Off Canvas Menu fir Mobile -->
+			    <aside class="left-off-canvas-menu">
+			        <ul>
+			            <li><a href="#">Global Board</a></li>
+			            <li><a href="#">Local Board</a></li>
+			            <li><a href="#">My Chapter</a></li>
+			            <li><a href="#">My Profile</a></li>
+			            <section data-ng-if="authentication.user">
+							<li><a href="/#!/signin">Sign in</a></li>
+						</section>
+			            <section data-ng-if="authentication.user">
+							<li><a href="/auth/signout">Sign out</a></li>
+						</section>
+			        </ul>
+			    </aside>
+			   <!-- close the off-canvas menu -->
+		  		<a class="exit-off-canvas"></a>
+			</div>
+		</div>
+
+			<div class="row">
+				<div class="large-12 columns">
+
+			  		<!-- Partial views -->
+			  		<section ng-view="" style="width:100%; padding-top:30px;"></section>
+
+				</div>
+			</div>
+		<!--Navigation End-->
+
+
+
+	  	<!-- Footer Begin -->
+	  	<footer class="row">
+			<div class="large-12 columns">
+				<p>&copy; Cal Cafeteria</p>
+			</div>
+		</footer>
+		
+		<script type="text/javascript">
+			window.user = <%- user || 'null' %>;
+		</script>
+
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-route.js"></script>
+
+		<script type="text/javascript" src="application.js"></script>
+		<script type="text/javascript" src="controllers/authentication.client.controller.js"></script>
+		<script type="text/javascript" src="controllers/index.client.controller.js"></script>
+		<script type="text/javascript" src="controllers/user_profile.controller.js"></script>
+		<script type="text/javascript" src="controllers/user_profile.factory.js"></script>
+		<script type="text/javascript" src="controllers/restaurant.controller.js"></script>
+		<script type="text/javascript" src="controllers/restaurant.factory.js"></script>
+		<script type="text/javascript" src="controllers/menu.controller.js"></script>
+		<script type="text/javascript" src="services/authentication.client.service.js"></script>
+		<script type="text/javascript" src="config/application.client.routes.js"></script>
+		<script>
+			document.write('<script src=js/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') +'.js><\/script>')
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/vendor/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+		<script src="http://foundation.zurb.com/assets/js/templates/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.js"></script>
+		<script>
+		    $(document).foundation();
+			var doc = document.documentElement;
+	        doc.setAttribute('data-useragent', navigator.userAgent);
+	    </script>
+
+
+  	</body>
+</html>

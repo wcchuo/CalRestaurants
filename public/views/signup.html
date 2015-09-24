@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="large-3 columns">&nbsp;</div>
+    <div class="large-6 columns">
+        <div class="index-block">
+            <h4 class="text-center">Sign Up</h4>
+            <form data-ng-submit="signup()" class="signin form-horizontal" novalidate autocomplete="off">
+                <fieldset>
+                    <div class="form-group">
+                        <label for="name">Name*</label>
+                        <input type="text" required id="name" name="name" class="form-control" data-ng-model="credentials.name" >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email/Username*</label>
+                        <input type="text" id="email" name="email" class="form-control" data-ng-model="credentials.email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password* (Minimum 8 characters)</label>
+                        <input type="password" id="password" name="password" class="form-control" data-ng-model="credentials.password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" name="phone" class="form-control" data-ng-model="credentials.phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address_1">Address 1</label>
+                        <input type="text" id="address_1" name="address_1" class="form-control" data-ng-model="credentials.address_1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address_2">Address 2</label>
+                        <input type="text" id="address_2" name="address_2" class="form-control" data-ng-model="credentials.address_2">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" class="form-control" data-ng-model="credentials.city">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="zipcode">Zipcode</label>
+                        <input type="text" id="zipcode" name="zipcode" class="form-control" data-ng-model="credentials.zipcode">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state" class="form-control" data-ng-model="credentials.state">
+                    </div>
+
+                    <div class="text-center form-group">
+                        <button type="submit" class="button success">Sign up</button>
+                        <br>&nbsp; or&nbsp;
+                        <a href="/#!/signin">Sign in</a>
+                    </div>
+
+                    <div data-ng-show="error" class="text-center text-danger">
+                        <strong>{{error}}</strong>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="large-3 columns"></div>
+</div>
